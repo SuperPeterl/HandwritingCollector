@@ -16,8 +16,6 @@ def home():
 def collect_strokes():
     if os.path.exists('strokes.npy'):
         n = np.load('strokes.npy')
-        plt.plot(n[:,1],n[:,2],'r.')
-        plt.show()
     else:
         n = np.array([])
     temp = []
@@ -29,7 +27,7 @@ def collect_strokes():
         print(i)
         temp.extend([[i['l'],i['x'],abs(i['y']-1600),text] for i in strokes_data[i]])
 
-    temp = np.array(temp)
+    temp = np.array()
     print(text+" : "+str(temp.shape))
     print(temp)
     np.save('strokes.npy',np.array(n.tolist()+temp.tolist()))
