@@ -61,8 +61,8 @@ def collect_strokes():
     with open('sentences.txt','a+',encoding="utf-8") as f:
         f.write(text+'\n')
     
-    plt.plot(temp[:,1],temp[:,2],'r.')
-    plt.show()
+    #plt.plot(temp[:,1],temp[:,2],'r.')
+    #plt.show()
     return 'Pen strokes data received and processed successfully'
 if __name__ == '__main__':
     testdb(uri)
