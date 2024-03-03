@@ -3,7 +3,7 @@ from flask import Flask, request, render_template
 import numpy as np
 import os
 import csv
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 from pymongo import MongoClient
 from pymongo.server_api import ServerApi
 uri = "mongodb+srv://peter:iloverm@cluster0.q2xercf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
