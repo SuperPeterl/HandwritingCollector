@@ -51,7 +51,7 @@ def collect_strokes():
     strokes_data = data.get('strokesData')
     for i in range(len(strokes_data)):
         print(i)
-        temp.extend([[i['l'],i['x'],abs(i['y']-1000)] for i in strokes_data[i]])
+        temp.extend([[i['l'],i['x'],abs(i['y']-500)] for i in strokes_data[i]])
     save(seq=temp,text= text,uri= uri)
     temp = np.array(temp)
     

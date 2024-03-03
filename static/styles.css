@@ -1,3 +1,6 @@
+html, body {
+    overflow-x:hidden 
+  } 
 body {
     font-family: 'Itim', cursive, 'Sofia Sans Extra Condensed', sans-serif;
     background-color: rgb(239, 239, 239);
