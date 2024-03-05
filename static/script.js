@@ -64,12 +64,14 @@ canvas.addEventListener('touchmove', draw1);
 canvas.addEventListener('touchend', stopDrawing1);
 
 function startDrawing(e) {
+    e.preventDefault();
     isDrawing = true;
     points = [];
     addPoint(l = 0,e);
 }
 
 function draw(e) {
+    e.preventDefault();g
     if (!isDrawing) return;
     addPoint(l = 0,e);
     drawPoints();
@@ -86,12 +88,14 @@ function stopDrawing(e) {
 }
 
 function startDrawing1(e){
+    e.prevetnDefault();
     isDrawing = true;
     points = [];
     addPoint(l = 0,e.touches[0]);
 }
 
 function draw1(e){
+    e.preventDefault();
     if (!isDrawing) return;
     addPoint(l = 0,e.touches[0]);
     drawPoints();
