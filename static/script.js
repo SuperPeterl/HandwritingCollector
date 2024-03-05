@@ -64,17 +64,18 @@ canvas.addEventListener('touchmove', draw1);
 canvas.addEventListener('touchend', stopDrawing1);
 
 function startDrawing(e) {
-    e.preventDefault();
     isDrawing = true;
     points = [];
     addPoint(l = 0,e);
+    e.preventDefault();
 }
 
 function draw(e) {
-    e.preventDefault();g
     if (!isDrawing) return;
     addPoint(l = 0,e);
     drawPoints();
+    e.preventDefault();
+    
 }
 
 function stopDrawing(e) {
@@ -85,20 +86,21 @@ function stopDrawing(e) {
         console.log(StrokeSet)
         points = [];
     }
+    e.preventDefault();
 }
 
 function startDrawing1(e){
-    e.prevetnDefault();
     isDrawing = true;
     points = [];
     addPoint(l = 0,e.touches[0]);
+    e.prevetnDefault();
 }
 
 function draw1(e){
-    e.preventDefault();
     if (!isDrawing) return;
     addPoint(l = 0,e.touches[0]);
     drawPoints();
+    e.preventDefault();
 }
 
 function stopDrawing1(e){
@@ -109,6 +111,7 @@ function stopDrawing1(e){
         console.log(StrokeSet)
         points = [];
     }
+    e.preventDefault();
 }
 function addPoint(l,e) {
     const rect = canvas.getBoundingClientRect();
